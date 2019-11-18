@@ -34,7 +34,7 @@ public class Capstoneproject01Application implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
-		String password = "bbcita";
+		String password = "12345";
 
 		for (int i = 0; i < 2; i++) {
 			String bcryptPassword = passwordEncoder.encode(password);
