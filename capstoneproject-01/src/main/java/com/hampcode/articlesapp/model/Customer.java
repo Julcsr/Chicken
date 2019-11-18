@@ -15,17 +15,15 @@ public class Customer {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "customer_id")
 	private Long id;
-    @NotEmpty(message="Please enter a name")
+    @NotEmpty(message="Ingrese un nombre")
 	private String name;
-    @NotEmpty(message="Please enter a name")
+    @NotEmpty(message="Ingrese un apellido paterno")
 	private String apellidoPaterno;
-    @NotEmpty(message="Please enter a name")
-	private String apellidoMaterno;
-    @NotEmpty(message="Please enter a name")
+    @NotEmpty(message="Ingrese un apellido materno")
+	private String apellidoMaterno; 
 	private int phone;
-    @NotEmpty(message="Please enter a name")
 	private String email;
-    @NotEmpty(message="Please enter a name")
+    @NotEmpty(message="Ingrese una direccion")
 	private String address;
 	public Long getId() {
 		return id;
