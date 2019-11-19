@@ -76,22 +76,22 @@ public class CustomerController {
 			RedirectAttributes attr,
 			Model model) {
 
-		
-        if(result.hasErrors()) {
-        	
-        	attr.addFlashAttribute("org.springframework.validation.BindingResult.customer",result);
-        	attr.addFlashAttribute("customer",customer);
-        	
-        	return "redirect:/customers/new";
-        }
+	
+	        if(result.hasErrors()) {
+	        	
+	        	attr.addFlashAttribute("org.springframework.validation.BindingResult.customer",result);
+	        	attr.addFlashAttribute("customer",customer);
+	        	
+	        	return "redirect:/customers/new";
+	        }
 
-		
-		Customer newCustomer = customerService.create(customer);
-		model.addAttribute("customer", newCustomer);
-		
+			Customer newCustomer = customerService.create(customer);
+			model.addAttribute("customer", newCustomer);
+
+			return "redirect:/customers/" + newCustomer.getId();
+			
 
 
-		return "redirect:/customers/" + newCustomer.getId();
 	}
 	@Secured({"ROLE_ADMIN"})
 	@GetMapping("{id}/edit")

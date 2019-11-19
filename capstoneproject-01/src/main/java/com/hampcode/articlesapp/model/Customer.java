@@ -25,6 +25,14 @@ public class Customer {
 	private String email;
     @NotEmpty(message="Ingrese una direccion")
 	private String address;
+    @NotEmpty(message="Ingrese un dni")
+    //@Column(unique=true)
+    private String dni;
+
+    
+    
+    
+
 	public Long getId() {
 		return id;
 	}
@@ -66,6 +74,12 @@ public class Customer {
 	}
 	public void setAddress(String address) {
 		this.address = address;
+	}
+	public String getDni() {
+		return dni;
+	}
+	public void setDni(String dni) {
+		this.dni = dni;
 	}
 	
 	

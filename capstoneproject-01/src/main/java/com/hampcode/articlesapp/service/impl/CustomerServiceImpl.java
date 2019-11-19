@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import com.hampcode.articlesapp.exception.ResourceNotFoundException;
 
 import com.hampcode.articlesapp.model.Customer;
+import com.hampcode.articlesapp.model.Employee;
 import com.hampcode.articlesapp.repository.CustomerRepository;
 import com.hampcode.articlesapp.service.CustomerService;
 
@@ -36,6 +37,7 @@ public class CustomerServiceImpl implements CustomerService{
 	public Customer create(Customer entity) {
 
 		Customer newCustomer;
+		
 		newCustomer = customerRepository.save(entity);
 		return newCustomer;
 	}
@@ -48,7 +50,8 @@ public class CustomerServiceImpl implements CustomerService{
 		customer.setApellidoMaterno(entity.getApellidoMaterno());
 		customer.setPhone(entity.getPhone());
 		customer.setAddress(entity.getAddress());
-		//customer.setEmail(entity.getEmail());
+		customer.setEmail(entity.getEmail());
+		customer.setDni(entity.getDni());
 		customerRepository.save(customer);
 		return customer;
 	}
