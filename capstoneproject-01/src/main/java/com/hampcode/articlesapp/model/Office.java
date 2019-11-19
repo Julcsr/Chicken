@@ -17,13 +17,13 @@ public class Office {
     
 	@Column(name = "phone_number", nullable = false, length = 9)
 	private int phoneNumber;
-    @NotEmpty(message="Please enter a name")
+    @NotEmpty(message="Por favor ingrese una dirección")
 	@Column(name = "adress", nullable = false, length = 50)
 	private String adress;
-    @NotEmpty(message="Please enter a name")
+    @NotEmpty(message="Por favor ingrese ingrese un correo")
 	@Column(name = "email", nullable =true, length = 50)
 	private String email;
-    @NotEmpty(message="Please enter a name")
+    @NotEmpty(message="Por favor ingrese un jefe")
 	@Column(name = "boss", nullable = true, length = 50)
 	private String boss;
 	public Long getId() {
