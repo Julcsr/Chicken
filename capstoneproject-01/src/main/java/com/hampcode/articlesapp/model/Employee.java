@@ -18,14 +18,14 @@ public class Employee {
     @NotEmpty(message="Please enter a name")
 	@Column(name = "name_employee", nullable = false, length = 50)
 	private String name;
-    @NotEmpty(message="Please enter a name")
+    @NotEmpty(message="Please enter a apellido")
 	@Column(name = "apellido_paterno", nullable = false, length = 50)
-    @NotEmpty(message="Please enter a name")
+    @NotEmpty(message="Por favor ingresa un apellido")
 	private String apellidoPaterno;
-    @NotEmpty(message="Please enter a name")
+    @NotEmpty(message="Por favor ingresa un apellido")
 	@Column(name = "apellido_materno", nullable = false, length = 50)
 	private String apellidoMaterno;
-    @NotEmpty(message="Please enter a name")
+    @NotEmpty(message="Por favor ingresa un dni")
 	@Column(name = "employee_dni", nullable = false, length = 8, unique=true)
 	private String dni;
 	@ManyToOne
