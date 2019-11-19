@@ -21,13 +21,13 @@ public class Order {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "order_id")
 	private Long id;
-    @NotEmpty(message="Please enter a name")
+    @NotEmpty(message="Por favor ingrese un nombre")
 	@Column(name = "order_name", nullable = false, length = 50)
 	private String name;
-    @NotEmpty(message="Please enter a name")
+
 	@Column(name = "order_price", nullable = false, length = 50)
 	private double price;
-    @NotEmpty(message="Please enter a name")
+  @NotEmpty(message="Por favor ingrese los ingredientes")
 	@Lob
 	@Type(type = "org.hibernate.type.TextType")
 	private String ingredients;
