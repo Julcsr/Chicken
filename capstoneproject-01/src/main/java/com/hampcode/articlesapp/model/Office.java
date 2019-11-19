@@ -14,7 +14,7 @@ public class Office {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-    @NotEmpty(message="Please enter a name")
+    
 	@Column(name = "phone_number", nullable = false, length = 9)
 	private int phoneNumber;
     @NotEmpty(message="Please enter a name")
